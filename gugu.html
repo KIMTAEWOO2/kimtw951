@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    열
+    <input id="col" type="text" name="col"> x
+    행
+    <input id="row" type="text" name="row">
+    <input type="button" id="make" value="생성" onclick="evenHard()">
+
+<div id="result"></div>
+
+<script type="text/javascript">
+
+function evenHard() {
+
+       var target = document.getElementById("gugudan");
+       var dan, num;
+       var left = document.getElementById('col').value;
+       var right = document.getElementById('row').value ;
+       var result;
+       var html = "";
+
+       html += "<table align='center' border='1' width='800'>";
+       for(dan=1; dan<=right; dan++) {
+                      html += "<tr>";
+              for(num=1; num<=left; num++) {
+
+                      result = dan * num;
+
+                      html += "<td align='center'>" + num + ' * ' + dan + ' = ' + result + "</td>";
+              }
+                      html += "</tr>";
+       }
+       html += "</table><br />";
+
+
+       target.innerHTML = html;
+       }
+   </script>
+
+   <div id="gugudan">
+  </body>
+</html>
