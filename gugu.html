@@ -5,9 +5,9 @@
     <title></title>
   </head>
   <body>
-    열
-    <input id="col" type="text" name="col"> x
     행
+    <input id="col" type="text" name="col"> x
+    열
     <input id="row" type="text" name="row">
     <input type="button" id="make" value="생성" onclick="evenHard()">
 
@@ -25,13 +25,13 @@ function evenHard() {
        var html = "";
 
        html += "<table align='center' border='1' width='800'>";
-       for(dan=1; dan<=right; dan++) {
+       for(dan=1; dan<=left; dan++) {
                       html += "<tr>";
-              for(num=1; num<=left; num++) {
+              for(num=1; num<=right; num++) {
 
                       result = dan * num;
 
-                      html += "<td align='center'>" + num + ' * ' + dan + ' = ' + result + "</td>";
+                      html += "<td align='center'>" + dan + ' * ' + num + ' = ' + result + "</td>";
               }
                       html += "</tr>";
        }
